@@ -11,6 +11,9 @@
 		B2DAAF272001286300B643DE /* PaletteHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAAF262001286300B643DE /* PaletteHelper.swift */; };
 		B2DAAF2920012C3700B643DE /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAAF2820012C3700B643DE /* FileReader.swift */; };
 		B2DAAF2B2001309600B643DE /* ExtensionLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAAF2A2001309600B643DE /* ExtensionLexer.swift */; };
+		B2DAAF332001360100B643DE /* ZeplinPaletteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAAF322001360100B643DE /* ZeplinPaletteTests.swift */; };
+		B2DAAF392001368700B643DE /* ExtensionLexerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAAF382001368700B643DE /* ExtensionLexerTests.swift */; };
+		B2DAAF3B200136D600B643DE /* ExtensionExample.txt in Resources */ = {isa = PBXBuildFile; fileRef = B2DAAF3A200136D600B643DE /* ExtensionExample.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,10 +34,22 @@
 		B2DAAF262001286300B643DE /* PaletteHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteHelper.swift; sourceTree = "<group>"; };
 		B2DAAF2820012C3700B643DE /* FileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
 		B2DAAF2A2001309600B643DE /* ExtensionLexer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionLexer.swift; sourceTree = "<group>"; };
+		B2DAAF302001360100B643DE /* ZeplinPaletteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZeplinPaletteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2DAAF322001360100B643DE /* ZeplinPaletteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeplinPaletteTests.swift; sourceTree = "<group>"; };
+		B2DAAF342001360100B643DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2DAAF382001368700B643DE /* ExtensionLexerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionLexerTests.swift; sourceTree = "<group>"; };
+		B2DAAF3A200136D600B643DE /* ExtensionExample.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ExtensionExample.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B2DAAF191FFFC99300B643DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2DAAF2D2001360100B643DE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -48,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				B2DAAF1E1FFFC99300B643DE /* ZeplinPalette */,
+				B2DAAF312001360100B643DE /* ZeplinPaletteTests */,
 				B2DAAF1D1FFFC99300B643DE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				B2DAAF1C1FFFC99300B643DE /* ZeplinPalette */,
+				B2DAAF302001360100B643DE /* ZeplinPaletteTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,6 +86,17 @@
 				B2DAAF2A2001309600B643DE /* ExtensionLexer.swift */,
 			);
 			path = ZeplinPalette;
+			sourceTree = "<group>";
+		};
+		B2DAAF312001360100B643DE /* ZeplinPaletteTests */ = {
+			isa = PBXGroup;
+			children = (
+				B2DAAF382001368700B643DE /* ExtensionLexerTests.swift */,
+				B2DAAF322001360100B643DE /* ZeplinPaletteTests.swift */,
+				B2DAAF342001360100B643DE /* Info.plist */,
+				B2DAAF3A200136D600B643DE /* ExtensionExample.txt */,
+			);
+			path = ZeplinPaletteTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,6 +119,23 @@
 			productReference = B2DAAF1C1FFFC99300B643DE /* ZeplinPalette */;
 			productType = "com.apple.product-type.tool";
 		};
+		B2DAAF2F2001360100B643DE /* ZeplinPaletteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2DAAF352001360100B643DE /* Build configuration list for PBXNativeTarget "ZeplinPaletteTests" */;
+			buildPhases = (
+				B2DAAF2C2001360100B643DE /* Sources */,
+				B2DAAF2D2001360100B643DE /* Frameworks */,
+				B2DAAF2E2001360100B643DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZeplinPaletteTests;
+			productName = ZeplinPaletteTests;
+			productReference = B2DAAF302001360100B643DE /* ZeplinPaletteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -102,6 +147,10 @@
 				ORGANIZATIONNAME = fr;
 				TargetAttributes = {
 					B2DAAF1B1FFFC99300B643DE = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					B2DAAF2F2001360100B643DE = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -120,9 +169,21 @@
 			projectRoot = "";
 			targets = (
 				B2DAAF1B1FFFC99300B643DE /* ZeplinPalette */,
+				B2DAAF2F2001360100B643DE /* ZeplinPaletteTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B2DAAF2E2001360100B643DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2DAAF3B200136D600B643DE /* ExtensionExample.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B2DAAF181FFFC99300B643DE /* Sources */ = {
@@ -133,6 +194,15 @@
 				B2DAAF2920012C3700B643DE /* FileReader.swift in Sources */,
 				B2DAAF201FFFC99300B643DE /* main.swift in Sources */,
 				B2DAAF272001286300B643DE /* PaletteHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2DAAF2C2001360100B643DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2DAAF392001368700B643DE /* ExtensionLexerTests.swift in Sources */,
+				B2DAAF332001360100B643DE /* ZeplinPaletteTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +333,36 @@
 			};
 			name = Release;
 		};
+		B2DAAF362001360100B643DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ZeplinPaletteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fr.ZeplinPaletteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		B2DAAF372001360100B643DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ZeplinPaletteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fr.ZeplinPaletteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -280,6 +380,15 @@
 			buildConfigurations = (
 				B2DAAF241FFFC99300B643DE /* Debug */,
 				B2DAAF251FFFC99300B643DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2DAAF352001360100B643DE /* Build configuration list for PBXNativeTarget "ZeplinPaletteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2DAAF362001360100B643DE /* Debug */,
+				B2DAAF372001360100B643DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
