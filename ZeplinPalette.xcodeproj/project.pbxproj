@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B2DAAF201FFFC99300B643DE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAAF1F1FFFC99300B643DE /* main.swift */; };
+		B2DAAF272001286300B643DE /* PaletteHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAAF262001286300B643DE /* PaletteHelper.swift */; };
+		B2DAAF2920012C3700B643DE /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAAF2820012C3700B643DE /* FileReader.swift */; };
+		B2DAAF2B2001309600B643DE /* ExtensionLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAAF2A2001309600B643DE /* ExtensionLexer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,9 @@
 /* Begin PBXFileReference section */
 		B2DAAF1C1FFFC99300B643DE /* ZeplinPalette */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ZeplinPalette; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2DAAF1F1FFFC99300B643DE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B2DAAF262001286300B643DE /* PaletteHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteHelper.swift; sourceTree = "<group>"; };
+		B2DAAF2820012C3700B643DE /* FileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
+		B2DAAF2A2001309600B643DE /* ExtensionLexer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionLexer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				B2DAAF1F1FFFC99300B643DE /* main.swift */,
+				B2DAAF262001286300B643DE /* PaletteHelper.swift */,
+				B2DAAF2820012C3700B643DE /* FileReader.swift */,
+				B2DAAF2A2001309600B643DE /* ExtensionLexer.swift */,
 			);
 			path = ZeplinPalette;
 			sourceTree = "<group>";
@@ -120,7 +129,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2DAAF2B2001309600B643DE /* ExtensionLexer.swift in Sources */,
+				B2DAAF2920012C3700B643DE /* FileReader.swift in Sources */,
 				B2DAAF201FFFC99300B643DE /* main.swift in Sources */,
+				B2DAAF272001286300B643DE /* PaletteHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
