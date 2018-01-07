@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B282DACA20028EF000BCE172 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAAF1F1FFFC99300B643DE /* main.swift */; };
+		B282DACB20028EF000BCE172 /* PaletteHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAAF262001286300B643DE /* PaletteHelper.swift */; };
+		B282DACC20028EF000BCE172 /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAAF2820012C3700B643DE /* FileReader.swift */; };
+		B282DACD20028EF000BCE172 /* ExtensionLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAAF2A2001309600B643DE /* ExtensionLexer.swift */; };
 		B2DAAF201FFFC99300B643DE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAAF1F1FFFC99300B643DE /* main.swift */; };
 		B2DAAF272001286300B643DE /* PaletteHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAAF262001286300B643DE /* PaletteHelper.swift */; };
 		B2DAAF2920012C3700B643DE /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAAF2820012C3700B643DE /* FileReader.swift */; };
@@ -15,6 +19,16 @@
 		B2DAAF392001368700B643DE /* ExtensionLexerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAAF382001368700B643DE /* ExtensionLexerTests.swift */; };
 		B2DAAF3B200136D600B643DE /* ExtensionExample.txt in Resources */ = {isa = PBXBuildFile; fileRef = B2DAAF3A200136D600B643DE /* ExtensionExample.txt */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B282DAC820028EE400BCE172 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2DAAF141FFFC99300B643DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2DAAF1B1FFFC99300B643DE;
+			remoteInfo = ZeplinPalette;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		B2DAAF1A1FFFC99300B643DE /* CopyFiles */ = {
@@ -130,6 +144,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				B282DAC920028EE400BCE172 /* PBXTargetDependency */,
 			);
 			name = ZeplinPaletteTests;
 			productName = ZeplinPaletteTests;
@@ -201,12 +216,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B282DACA20028EF000BCE172 /* main.swift in Sources */,
+				B282DACB20028EF000BCE172 /* PaletteHelper.swift in Sources */,
+				B282DACC20028EF000BCE172 /* FileReader.swift in Sources */,
+				B282DACD20028EF000BCE172 /* ExtensionLexer.swift in Sources */,
 				B2DAAF392001368700B643DE /* ExtensionLexerTests.swift in Sources */,
 				B2DAAF332001360100B643DE /* ZeplinPaletteTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B282DAC920028EE400BCE172 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2DAAF1B1FFFC99300B643DE /* ZeplinPalette */;
+			targetProxy = B282DAC820028EE400BCE172 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		B2DAAF211FFFC99300B643DE /* Debug */ = {
