@@ -13,27 +13,26 @@ class ExtensionLexerTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-    
+
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
 
-    func testExample() {
+    func testTokenize() {
         let example = stringFromFile("ExtensionExample")
-        
         let lexer = ExtensionLexer()
-        
+        var result = lexer.tokenize(input: example!)
+        XCTAssert(result.count != 0)
     }
 
-    func stringFromFile(_ filename:String) -> String?
-    {
-        let file = Bundle(for: ExtensionLexerTests.classForCoder())
-            .url(forResource: filename, withExtension: "txt")!
+    func stringFromFile(_ filename: String) -> String? {
+        guard let file = Bundle(for: ExtensionLexerTests.classForCoder())
+            .url(forResource: filename, withExtension: "txt") else {
+            return nil
+        }
         let result = try? String(contentsOf: file)
         return result
     }
-    
+
 }

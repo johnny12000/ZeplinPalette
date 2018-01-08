@@ -9,36 +9,59 @@
 import Foundation
 
 enum Token {
-    case Define
-    case Identifier(String)
-    case Number(Float)
-    case ParensOpen
-    case ParensClose
-    case Comma
-    case Other(String)
+    case define
+    case number(Float)
+    case parensOpen
+    case parensClose
+    case comma
+    case other(String)
+    case `extension`
+    case identifier(String)
+    case `class`
+    case `var`
+    case varType(String?)
+    case type
+    case `return`
+    case divide
+    case red
+    case green
+    case blue
+    case alpha
 }
 
 class ExtensionLexer {
-    
+
     typealias TokenGenerator = (String) -> Token?
-    
+
     let tokenList: [(String, TokenGenerator)] = [
         ("[ \t\n]", { _ in nil }),
-        ("[a-zA-Z][a-zA-Z0-9]*", { $0 == "def" ? .Define : .Identifier($0) }),
-        ("[0-9.]+", { (r: String) in .Number((r as NSString).floatValue) }),
-        ("\\(", { _ in .ParensOpen }),
-        ("\\)", { _ in .ParensClose }),
-        (",", { _ in .Comma }),
+        ("extension", { _ in .extension }),
+        ("class", { _ in .class }),
+        ("var", { _ in .var }),
+        ("return", { _ in .return }),
+        ("UIColor", { .varType($0) }),
+        ("red", { _ in .red }),
+        ("green", { _ in .green }),
+        ("blue", { _ in .blue }),
+        ("alpha", { _ in .alpha }),
+        ("[a-zA-Z][a-zA-Z0-9]*", {
+            return .identifier($0)
+        }),
+        ("[0-9.]+", { (r: String) in .number((r as NSString).floatValue) }),
+        ("[\\(\\{]", { _ in .parensOpen }),
+        ("[\\)\\}]", { _ in .parensClose }),
+        (",", { _ in .comma }),
+        (":", { _ in .define }),
+        ("/", { _ in .divide })
         ]
-    
-    
+
     func tokenize(input: String) -> [Token] {
         var tokens = [Token]()
         var content = input
-        
+
         while (content.count > 0) {
             var matched = false
-            
+
             for (pattern, generator) in tokenList {
                 if let m = content.match(regex: pattern) {
                     if let t = generator(m) {
@@ -50,16 +73,16 @@ class ExtensionLexer {
                     break
                 }
             }
-            
+
             if !matched {
                 let index = content.index(content.startIndex, offsetBy: 1)
-                tokens.append(.Other(String(content[..<index])))
+                tokens.append(.other(String(content[..<index])))
                 content = String(content[index...])
             }
         }
         return tokens
     }
-    
+
 }
 
 var expressions = [String: NSRegularExpression]()
@@ -72,7 +95,7 @@ public extension String {
             expression = try! NSRegularExpression(pattern: "^\(regex)", options: [])
             expressions[regex] = expression
         }
-        
+
         let range = expression.rangeOfFirstMatch(in: self, options: [], range: NSMakeRange(0, self.utf16.count))
         if range.location != NSNotFound {
             return (self as NSString).substring(with: range)
