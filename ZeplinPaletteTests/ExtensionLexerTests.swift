@@ -22,7 +22,7 @@ class ExtensionLexerTests: XCTestCase {
     func testTokenize() {
         let example = stringFromFile("ExtensionExample")
         let lexer = ExtensionLexer()
-        var result = lexer.tokenize(input: example!)
+        let result = lexer.tokenize(input: example!)
         XCTAssert(result.count != 0)
     }
 

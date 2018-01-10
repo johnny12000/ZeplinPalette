@@ -27,6 +27,32 @@ enum Token {
     case green
     case blue
     case alpha
+    
+    func isTypeOf(_ token: Token) -> Bool {
+        switch (self, token) {
+        case (.number(_), .number(_)),
+            (.define, .define),
+        (.parensOpen, .parensOpen),
+            (.parensClose, .parensClose),
+            (.comma, .comma),
+            (.other(_), .other(_)),
+            (.extension, .extension),
+            (.identifier(_), .identifier(_)),
+            (.class, .class),
+            (.var, .var),
+            (.varType(_), .varType(_)),
+            (.type, .type),
+            (.return, .return),
+            (.divide, .divide),
+            (.red, .red),
+            (.green, .green),
+            (.blue, .blue),
+            (.alpha, .alpha):
+            return true
+        default:
+            return false
+        }
+    }
 }
 
 class ExtensionLexer {

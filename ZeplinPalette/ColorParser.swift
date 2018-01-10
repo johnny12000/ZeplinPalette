@@ -34,7 +34,12 @@ class ColorParser {
     }
 
     func isSliceColorDefinition(_ slice: ArraySlice<Token>) -> Bool {
-        return true
+        var result = true
+        for index in 0...slice.count {
+            result = result && slice[index].isTypeOf(colorDefinition[index])
+            if !result { break }
+        }
+        return result
     }
 
     func createColor(_ slice: ArraySlice<Token>) -> NSColor {
