@@ -29,7 +29,7 @@ class ColorParserTests: XCTestCase {
             Token.blue, Token.define, Token.number(0.1), Token.comma,
             Token.alpha, Token.define, Token.number(1.0), Token.parensClose,
             Token.parensClose ]
-        let slice: ArraySlice<Token> = colorDefinition[0...colorDefinition.count]
+        let slice: ArraySlice<Token> = colorDefinition[0...colorDefinition.count-1]
         
         let parser = ColorParser()
         let result = parser.isSliceColorDefinition(slice)

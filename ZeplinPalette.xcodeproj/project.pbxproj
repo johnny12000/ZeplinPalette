@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		B22CA0C7200A7767002B24A1 /* ColorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22CA0C6200A7767002B24A1 /* ColorParser.swift */; };
-		B282DACA20028EF000BCE172 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAAF1F1FFFC99300B643DE /* main.swift */; };
-		B282DACB20028EF000BCE172 /* PaletteHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAAF262001286300B643DE /* PaletteHelper.swift */; };
-		B282DACC20028EF000BCE172 /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAAF2820012C3700B643DE /* FileReader.swift */; };
-		B282DACD20028EF000BCE172 /* ExtensionLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAAF2A2001309600B643DE /* ExtensionLexer.swift */; };
+		B25B1B54200A95A400AE0F81 /* ColorParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B1B53200A95A400AE0F81 /* ColorParserTests.swift */; };
+		B25B1B56200ABC3200AE0F81 /* PaletteHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAAF262001286300B643DE /* PaletteHelper.swift */; };
+		B25B1B57200ABC3600AE0F81 /* ExtensionLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAAF2A2001309600B643DE /* ExtensionLexer.swift */; };
+		B25B1B58200ABC3A00AE0F81 /* ColorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22CA0C6200A7767002B24A1 /* ColorParser.swift */; };
+		B25B1B59200ABC3F00AE0F81 /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAAF2820012C3700B643DE /* FileReader.swift */; };
 		B2DAAF201FFFC99300B643DE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAAF1F1FFFC99300B643DE /* main.swift */; };
 		B2DAAF272001286300B643DE /* PaletteHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAAF262001286300B643DE /* PaletteHelper.swift */; };
 		B2DAAF2920012C3700B643DE /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAAF2820012C3700B643DE /* FileReader.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		B22CA0C6200A7767002B24A1 /* ColorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorParser.swift; sourceTree = "<group>"; };
+		B25B1B53200A95A400AE0F81 /* ColorParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorParserTests.swift; sourceTree = "<group>"; };
 		B2DAAF1C1FFFC99300B643DE /* ZeplinPalette */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ZeplinPalette; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2DAAF1F1FFFC99300B643DE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B2DAAF262001286300B643DE /* PaletteHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteHelper.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		B2DAAF312001360100B643DE /* ZeplinPaletteTests */ = {
 			isa = PBXGroup;
 			children = (
+				B25B1B53200A95A400AE0F81 /* ColorParserTests.swift */,
 				B2DAAF382001368700B643DE /* ExtensionLexerTests.swift */,
 				B2DAAF322001360100B643DE /* ZeplinPaletteTests.swift */,
 				B2DAAF342001360100B643DE /* Info.plist */,
@@ -140,6 +143,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2DAAF352001360100B643DE /* Build configuration list for PBXNativeTarget "ZeplinPaletteTests" */;
 			buildPhases = (
+				B25B1B55200A95EF00AE0F81 /* ShellScript */,
 				B2DAAF2C2001360100B643DE /* Sources */,
 				B2DAAF2D2001360100B643DE /* Frameworks */,
 				B2DAAF2E2001360100B643DE /* Resources */,
@@ -203,6 +207,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B25B1B55200A95EF00AE0F81 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"===========\"\necho \"Intermed: ${SYMROOT}\"\necho \"===========\"\necho \"Test ${TEST_HOST}\"\necho \"===========\"\necho \"Build: ${BUILD_DIR}\"\necho \"${BUILT_PRODUCTS_DIR}\"\necho \"===========\"\necho \"${TARGET_TEMP_DIR}/${PRODUCT_NAME}-LinkMap-${CURRENT_VARIANT}-${CURRENT_ARCH}.txt\"\necho \"Target ${TARGET_NAME}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B2DAAF181FFFC99300B643DE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -220,12 +240,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B282DACA20028EF000BCE172 /* main.swift in Sources */,
-				B282DACB20028EF000BCE172 /* PaletteHelper.swift in Sources */,
-				B282DACC20028EF000BCE172 /* FileReader.swift in Sources */,
-				B282DACD20028EF000BCE172 /* ExtensionLexer.swift in Sources */,
 				B2DAAF392001368700B643DE /* ExtensionLexerTests.swift in Sources */,
+				B25B1B56200ABC3200AE0F81 /* PaletteHelper.swift in Sources */,
+				B25B1B59200ABC3F00AE0F81 /* FileReader.swift in Sources */,
 				B2DAAF332001360100B643DE /* ZeplinPaletteTests.swift in Sources */,
+				B25B1B54200A95A400AE0F81 /* ColorParserTests.swift in Sources */,
+				B25B1B58200ABC3A00AE0F81 /* ColorParser.swift in Sources */,
+				B25B1B57200ABC3600AE0F81 /* ExtensionLexer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,7 +388,6 @@
 		B2DAAF362001360100B643DE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = ZeplinPaletteTests/Info.plist;
@@ -375,14 +395,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fr.ZeplinPaletteTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
 		};
 		B2DAAF372001360100B643DE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = ZeplinPaletteTests/Info.plist;
@@ -390,7 +408,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fr.ZeplinPaletteTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
 		};
@@ -404,7 +421,7 @@
 				B2DAAF221FFFC99300B643DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		B2DAAF231FFFC99300B643DE /* Build configuration list for PBXNativeTarget "ZeplinPalette" */ = {
 			isa = XCConfigurationList;
@@ -413,7 +430,7 @@
 				B2DAAF251FFFC99300B643DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		B2DAAF352001360100B643DE /* Build configuration list for PBXNativeTarget "ZeplinPaletteTests" */ = {
 			isa = XCConfigurationList;
@@ -422,7 +439,7 @@
 				B2DAAF372001360100B643DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

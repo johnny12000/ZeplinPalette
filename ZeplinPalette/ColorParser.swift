@@ -35,7 +35,7 @@ class ColorParser {
 
     func isSliceColorDefinition(_ slice: ArraySlice<Token>) -> Bool {
         var result = true
-        for index in 0...slice.count {
+        for index in 0...slice.count-1 {
             result = result && slice[index].isTypeOf(colorDefinition[index])
             if !result { break }
         }
