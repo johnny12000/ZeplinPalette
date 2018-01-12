@@ -27,7 +27,7 @@ enum Token {
     case green
     case blue
     case alpha
-    
+
     func isTypeOf(_ token: Token) -> Bool {
         switch (self, token) {
         case (.number(_), .number(_)),
@@ -51,6 +51,15 @@ enum Token {
             return true
         default:
             return false
+        }
+    }
+
+    func numberValue() -> Float {
+        switch self {
+        case let .number(num):
+            return num
+        default:
+            return 0
         }
     }
 }
