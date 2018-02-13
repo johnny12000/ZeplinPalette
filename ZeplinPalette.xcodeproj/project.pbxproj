@@ -13,6 +13,11 @@
 		B25B1B57200ABC3600AE0F81 /* ExtensionLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAAF2A2001309600B643DE /* ExtensionLexer.swift */; };
 		B25B1B58200ABC3A00AE0F81 /* ColorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22CA0C6200A7767002B24A1 /* ColorParser.swift */; };
 		B25B1B59200ABC3F00AE0F81 /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAAF2820012C3700B643DE /* FileReader.swift */; };
+		B25B1B5B200BB9D900AE0F81 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B1B5A200BB9D900AE0F81 /* Token.swift */; };
+		B25B1B5C200BBA0100AE0F81 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B1B5A200BB9D900AE0F81 /* Token.swift */; };
+		B25B1B5E200BBAC200AE0F81 /* NSColorHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B1B5D200BBAC200AE0F81 /* NSColorHelpers.swift */; };
+		B25B1B5F200BBBFF00AE0F81 /* NSColorHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B1B5D200BBAC200AE0F81 /* NSColorHelpers.swift */; };
+		B25B1B61200BBC1F00AE0F81 /* NSColorHelpersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B1B60200BBC1F00AE0F81 /* NSColorHelpersTest.swift */; };
 		B2DAAF201FFFC99300B643DE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAAF1F1FFFC99300B643DE /* main.swift */; };
 		B2DAAF272001286300B643DE /* PaletteHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAAF262001286300B643DE /* PaletteHelper.swift */; };
 		B2DAAF2920012C3700B643DE /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAAF2820012C3700B643DE /* FileReader.swift */; };
@@ -47,6 +52,9 @@
 /* Begin PBXFileReference section */
 		B22CA0C6200A7767002B24A1 /* ColorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorParser.swift; sourceTree = "<group>"; };
 		B25B1B53200A95A400AE0F81 /* ColorParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorParserTests.swift; sourceTree = "<group>"; };
+		B25B1B5A200BB9D900AE0F81 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		B25B1B5D200BBAC200AE0F81 /* NSColorHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColorHelpers.swift; sourceTree = "<group>"; };
+		B25B1B60200BBC1F00AE0F81 /* NSColorHelpersTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColorHelpersTest.swift; sourceTree = "<group>"; };
 		B2DAAF1C1FFFC99300B643DE /* ZeplinPalette */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ZeplinPalette; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2DAAF1F1FFFC99300B643DE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B2DAAF262001286300B643DE /* PaletteHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteHelper.swift; sourceTree = "<group>"; };
@@ -103,6 +111,8 @@
 				B2DAAF2820012C3700B643DE /* FileReader.swift */,
 				B2DAAF2A2001309600B643DE /* ExtensionLexer.swift */,
 				B22CA0C6200A7767002B24A1 /* ColorParser.swift */,
+				B25B1B5A200BB9D900AE0F81 /* Token.swift */,
+				B25B1B5D200BBAC200AE0F81 /* NSColorHelpers.swift */,
 			);
 			path = ZeplinPalette;
 			sourceTree = "<group>";
@@ -115,6 +125,7 @@
 				B2DAAF322001360100B643DE /* ZeplinPaletteTests.swift */,
 				B2DAAF342001360100B643DE /* Info.plist */,
 				B2DAAF3A200136D600B643DE /* ExtensionExample.txt */,
+				B25B1B60200BBC1F00AE0F81 /* NSColorHelpersTest.swift */,
 			);
 			path = ZeplinPaletteTests;
 			sourceTree = "<group>";
@@ -230,7 +241,9 @@
 			files = (
 				B2DAAF2B2001309600B643DE /* ExtensionLexer.swift in Sources */,
 				B2DAAF2920012C3700B643DE /* FileReader.swift in Sources */,
+				B25B1B5E200BBAC200AE0F81 /* NSColorHelpers.swift in Sources */,
 				B2DAAF201FFFC99300B643DE /* main.swift in Sources */,
+				B25B1B5B200BB9D900AE0F81 /* Token.swift in Sources */,
 				B2DAAF272001286300B643DE /* PaletteHelper.swift in Sources */,
 				B22CA0C7200A7767002B24A1 /* ColorParser.swift in Sources */,
 			);
@@ -246,7 +259,10 @@
 				B2DAAF332001360100B643DE /* ZeplinPaletteTests.swift in Sources */,
 				B25B1B54200A95A400AE0F81 /* ColorParserTests.swift in Sources */,
 				B25B1B58200ABC3A00AE0F81 /* ColorParser.swift in Sources */,
+				B25B1B5F200BBBFF00AE0F81 /* NSColorHelpers.swift in Sources */,
 				B25B1B57200ABC3600AE0F81 /* ExtensionLexer.swift in Sources */,
+				B25B1B61200BBC1F00AE0F81 /* NSColorHelpersTest.swift in Sources */,
+				B25B1B5C200BBA0100AE0F81 /* Token.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

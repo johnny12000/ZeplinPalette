@@ -8,62 +8,6 @@
 
 import Foundation
 
-enum Token {
-    case define
-    case number(Float)
-    case parensOpen
-    case parensClose
-    case comma
-    case other(String)
-    case `extension`
-    case identifier(String)
-    case `class`
-    case `var`
-    case varType(String?)
-    case type
-    case `return`
-    case divide
-    case red
-    case green
-    case blue
-    case alpha
-
-    func isTypeOf(_ token: Token) -> Bool {
-        switch (self, token) {
-        case (.number(_), .number(_)),
-            (.define, .define),
-        (.parensOpen, .parensOpen),
-            (.parensClose, .parensClose),
-            (.comma, .comma),
-            (.other(_), .other(_)),
-            (.extension, .extension),
-            (.identifier(_), .identifier(_)),
-            (.class, .class),
-            (.var, .var),
-            (.varType(_), .varType(_)),
-            (.type, .type),
-            (.return, .return),
-            (.divide, .divide),
-            (.red, .red),
-            (.green, .green),
-            (.blue, .blue),
-            (.alpha, .alpha):
-            return true
-        default:
-            return false
-        }
-    }
-
-    func numberValue() -> Float {
-        switch self {
-        case let .number(num):
-            return num
-        default:
-            return 0
-        }
-    }
-}
-
 class ExtensionLexer {
 
     typealias TokenGenerator = (String) -> Token?
@@ -82,7 +26,7 @@ class ExtensionLexer {
         ("[a-zA-Z][a-zA-Z0-9]*", {
             return .identifier($0)
         }),
-        ("[0-9.]+", { (r: String) in .number((r as NSString).floatValue) }),
+        ("[0-9.]+", { numberStr in .number(Float(numberStr) ?? 0) }),
         ("[\\(\\{]", { _ in .parensOpen }),
         ("[\\)\\}]", { _ in .parensClose }),
         (",", { _ in .comma }),
@@ -94,7 +38,7 @@ class ExtensionLexer {
         var tokens = [Token]()
         var content = input
 
-        while (content.count > 0) {
+        while content.count > 0 {
             var matched = false
 
             for (pattern, generator) in tokenList {

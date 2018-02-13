@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import ZeplinPalette
+import AppKit
 
 class ColorParserTests: XCTestCase {
 
@@ -22,7 +23,8 @@ class ColorParserTests: XCTestCase {
 
     func testIsSliceColorDefinition() {
         let colorDefinition: [Token] = [
-            Token.class, Token.var, Token.identifier("testColor"), Token.define, Token.varType("UIColor"), Token.parensOpen,
+            Token.class, Token.var, Token.identifier("testColor"), Token.define,
+            Token.varType("UIColor"), Token.parensOpen,
             Token.return, Token.varType("UIColor"), Token.parensOpen,
             Token.red, Token.define, Token.number(0.5), Token.comma,
             Token.green, Token.define, Token.number(0.4), Token.comma,
@@ -36,23 +38,19 @@ class ColorParserTests: XCTestCase {
         XCTAssertTrue(result)
     }
 
-    func testCreateColor() {
+    func testIsSliceColorDefinitionFalse() {
         let colorDefinition: [Token] = [
-            Token.class, Token.var, Token.identifier("testColor"), Token.define, Token.varType("UIColor"), Token.parensOpen,
+            Token.class, Token.var, Token.identifier("testColor"), Token.define,
+            Token.varType("UIColor"), Token.parensOpen,
             Token.return, Token.varType("UIColor"), Token.parensOpen,
             Token.red, Token.define, Token.number(0.5), Token.comma,
             Token.green, Token.define, Token.number(0.4), Token.comma,
-            Token.blue, Token.define, Token.number(0.1), Token.comma,
-            Token.alpha, Token.define, Token.number(1.0), Token.parensClose,
-            Token.parensClose ]
+            Token.blue, Token.define, Token.other(""), Token.comma,
+            Token.alpha, Token.define ]
         let slice: ArraySlice<Token> = colorDefinition[0...colorDefinition.count-1]
 
         let parser = ColorParser()
-        let result = parser.createColor(slice)
-        XCTAssertEqual(result.redComponent, 0.5, accuracy: 0.01)
-        XCTAssertEqual(result.greenComponent, 0.4, accuracy: 0.01)
-        XCTAssertEqual(result.blueComponent, 0.1, accuracy: 0.01)
-        XCTAssertEqual(result.alphaComponent, 1.0, accuracy: 0.01)
+        let result = parser.isSliceColorDefinition(slice)
+        XCTAssertFalse(result)
     }
-
 }
