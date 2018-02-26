@@ -26,6 +26,24 @@ class ExtensionLexerTests: XCTestCase {
         XCTAssert(result.count != 0)
     }
 
+    func testSimplify() {
+        let colorDefinition: [Token] = [
+            Token.class, Token.var, Token.identifier("testColor"), Token.define,
+            Token.varType("UIColor"), Token.parensOpen,
+            Token.return, Token.varType("UIColor"), Token.parensOpen,
+            Token.red, Token.define, Token.number(0.5), Token.divide, Token.number(2), Token.comma,
+            Token.green, Token.define, Token.number(0.4), Token.comma,
+            Token.blue, Token.define, Token.number(0.1), Token.comma,
+            Token.alpha, Token.define, Token.number(1.0), Token.parensClose,
+            Token.parensClose ]
+        let lexer = ExtensionLexer()
+        let result = lexer.simplify(tokens: colorDefinition)
+        XCTAssert(result[11].numberValue() == 0.25)
+        XCTAssert(result[12].isTypeOf(.comma))
+    }
+
+    // MARK: - Helper methods
+
     func stringFromFile(_ filename: String) -> String? {
         guard let file = Bundle(for: ExtensionLexerTests.classForCoder())
             .url(forResource: filename, withExtension: "txt") else {

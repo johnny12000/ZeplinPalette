@@ -8,6 +8,8 @@
 
 import Foundation
 
+var expressions = [String: NSRegularExpression]()
+
 class ExtensionLexer {
 
     typealias TokenGenerator = (String) -> Token?
@@ -62,9 +64,30 @@ class ExtensionLexer {
         return tokens
     }
 
+    /// Simplifies the token list - calculates basic operations
+    /// - parameter tokens: Tokens array
+    /// - returns: Simplified tokens array
+    func simplify(tokens: [Token]) -> [Token] {
+        var result: [Token] = []
+        var skipNext = false
+        for i in 0..<tokens.count {
+            if tokens[i].isTypeOf(.divide) {
+                let first = tokens[i-1]
+                let second = tokens[i+1]
+                let res = first.numberValue() / second.numberValue()
+                skipNext = true
+                result.removeLast()
+                result.append(Token.number(res))
+            } else if skipNext {
+                skipNext = false
+            } else {
+                result.append(tokens[i])
+            }
+        }
+        return result
+    }
 }
 
-var expressions = [String: NSRegularExpression]()
 public extension String {
     public func match(regex: String) -> String? {
         let expression: NSRegularExpression
