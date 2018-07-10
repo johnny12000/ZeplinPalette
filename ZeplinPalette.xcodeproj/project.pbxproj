@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B22CA0C7200A7767002B24A1 /* ColorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22CA0C6200A7767002B24A1 /* ColorParser.swift */; };
+		B22F6B5A20F478FD00CE2716 /* PaletteHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22F6B5920F478FD00CE2716 /* PaletteHelperTests.swift */; };
 		B25B1B54200A95A400AE0F81 /* ColorParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B1B53200A95A400AE0F81 /* ColorParserTests.swift */; };
 		B25B1B56200ABC3200AE0F81 /* PaletteHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAAF262001286300B643DE /* PaletteHelper.swift */; };
 		B25B1B57200ABC3600AE0F81 /* ExtensionLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAAF2A2001309600B643DE /* ExtensionLexer.swift */; };
@@ -51,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		B22CA0C6200A7767002B24A1 /* ColorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorParser.swift; sourceTree = "<group>"; };
+		B22F6B5920F478FD00CE2716 /* PaletteHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteHelperTests.swift; sourceTree = "<group>"; };
 		B25B1B53200A95A400AE0F81 /* ColorParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorParserTests.swift; sourceTree = "<group>"; };
 		B25B1B5A200BB9D900AE0F81 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		B25B1B5D200BBAC200AE0F81 /* NSColorHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColorHelpers.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				B2DAAF342001360100B643DE /* Info.plist */,
 				B2DAAF3A200136D600B643DE /* ExtensionExample.txt */,
 				B25B1B60200BBC1F00AE0F81 /* NSColorHelpersTest.swift */,
+				B22F6B5920F478FD00CE2716 /* PaletteHelperTests.swift */,
 			);
 			path = ZeplinPaletteTests;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				B2DAAF332001360100B643DE /* ZeplinPaletteTests.swift in Sources */,
 				B25B1B54200A95A400AE0F81 /* ColorParserTests.swift in Sources */,
 				B25B1B58200ABC3A00AE0F81 /* ColorParser.swift in Sources */,
+				B22F6B5A20F478FD00CE2716 /* PaletteHelperTests.swift in Sources */,
 				B25B1B5F200BBBFF00AE0F81 /* NSColorHelpers.swift in Sources */,
 				B25B1B57200ABC3600AE0F81 /* ExtensionLexer.swift in Sources */,
 				B25B1B61200BBC1F00AE0F81 /* NSColorHelpersTest.swift in Sources */,

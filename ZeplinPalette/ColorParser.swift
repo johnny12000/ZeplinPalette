@@ -11,13 +11,33 @@ import AppKit
 
 class ColorParser {
 
+    //List of tokens that represent a definition of color
     let colorDefinition: [Token] = [
-        Token.class, Token.var, Token.identifier(""), Token.define, Token.varType("UIColor"), Token.parensOpen,
-        Token.return, Token.varType("UIColor"), Token.parensOpen,
-        Token.red, Token.define, Token.number(0), Token.comma,
-        Token.green, Token.define, Token.number(0), Token.comma,
-        Token.blue, Token.define, Token.number(0), Token.comma,
-        Token.alpha, Token.define, Token.number(0), Token.parensClose,
+        Token.class,
+        Token.var,
+        Token.identifier(""),
+        Token.define,
+        Token.varType("UIColor"),
+        Token.parensOpen,
+        Token.return,
+        Token.varType("UIColor"),
+        Token.parensOpen,
+        Token.red,
+        Token.define,
+        Token.number(0),
+        Token.comma,
+        Token.green,
+        Token.define,
+        Token.number(0),
+        Token.comma,
+        Token.blue,
+        Token.define,
+        Token.number(0),
+        Token.comma,
+        Token.alpha,
+        Token.define,
+        Token.number(0),
+        Token.parensClose,
         Token.parensClose ]
 
     func findColorDefinitions(_ list: [Token]) -> [NSColor] {
